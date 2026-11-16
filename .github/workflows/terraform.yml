@@ -1,5 +1,5 @@
 
-name: Terraform S3 CI-CD
+name: Terraform CI-CD
 
 on:
   pull_request:
@@ -14,6 +14,9 @@ jobs:
   # CI: Validate code on pull requests
   validate:
     runs-on: ubuntu-latest
+     defaults:
+      run:
+        working-directory: ./Terraform
 
     steps:
       - name: Checkout
